@@ -1,0 +1,86 @@
+$primaryLightColor: #fefefe;
+$fontFamily: 'Space Mono', sans-serif;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0 1.5rem;
+
+    >header {
+        display: flex;
+        flex-direction: row;
+        max-width: 45.625rem;
+        justify-content: space-between;
+        font-family: $fontFamily;
+        width: 100%;
+        padding: .5rem 0;
+        margin-bottom: 2.25rem;
+
+        .brand {
+            font-weight: bold;
+            font-size: 1.625rem;
+        }
+
+        button {
+            border: none;
+            background-color: transparent;
+            font-family: $fontFamily;
+
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                font-weight: 800;
+                margin-right: 10px;
+            }
+
+            .icon {
+                display: inline-block;
+                vertical-align: middle;
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+    }
+
+    main {
+        .user {
+            margin-top: 1rem;
+            padding: 2rem 1.5rem;
+            border-radius: 15px;
+            visibility: hidden;
+
+            >header {
+                display: flex;
+                flex-flow: row nowrap;
+                gap: 1rem;
+
+                .user__avatar,
+                .user__avatar-img {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                }
+            }
+
+        }
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .visible {
+        visibility: hidden;
+    }
+}

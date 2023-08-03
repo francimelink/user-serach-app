@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Frontend Mentor | GitHub user search app</title>
+</head>
+
+<body class="dark">
+    <header>
+        <div class="brand">devfinder</div>
+        <div>
+            <button id="themeLight" type="button">
+                <span>Light</span>
+                <img class="icon" src="./assets/icon-sun.svg" alt="">
+            </button>
+            <button id="themeDark" class="hide" type="button">
+                <span>Dark</span>
+                <img class="icon" src="./assets/icon-moon.svg" alt="">
+            </button>
+        </div>
+    </header>
+    <main>
+        <form>
+            <img src="./assets/icon-search.svg" alt="">
+            <input type="text" name="search" id="search" placeholder="Search GitHub username..."
+                aria-label="Search GitHub username...">
+            <button>Search</button>
+        </form>
+        <div id="user" class="user">
+            <header>
+                <picture class="user__avatar">
+                    <img class="user__avatar-img" src="{{ avatarUrl }}" alt="" aria-hidden="true">
+                </picture>
+                <div class="user__data">
+                    <div class="user__data-name"></div>
+                    <div class="user__data-at"></div>
+                    <div class="user__data-joined"></div>
+                </div>
+            </header>
+            <div>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, dolores!
+                </p>
+                <div>
+                    Repos 8
+                    Followers 3938
+                    Following 9
+                </div>
+            </div>
+            <footer>
+                <div>
+                    <img src="./assets/icon-location.svg" alt="">
+                    San Francisco
+                </div>
+                <div>
+                    <img src="./assets/icon-website.svg" alt="">
+                    https://github.blog
+                </div>
+                <div>
+                    <img src="./assets/icon-twitter.svg" alt="">Not Available
+                </div>
+                <div><img src="./assets/icon-company.svg" alt="">@github</div>
+            </footer>
+        </div>
+    </main>
+
+    <script src="./script/main.js"></script>
+
+</body>
+
+</html>
