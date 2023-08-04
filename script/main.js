@@ -13,7 +13,8 @@ const app = Vue.createApp({
             userLocation: '',
             userWebsite: '',
             userTwitter: '',
-            userCompany: ''
+            userCompany: '',
+            isVisible: false
         }
     },
     methods: {
@@ -24,10 +25,10 @@ const app = Vue.createApp({
             this.userAt = `@${userData.login}`;
             this.userJoined = `Joined ${userData.created_at}`
 
+            // TODO: fullfill all other data. 
 
-            console.log(this.userAvatarImg);
 
-            //user.classList.add('visible')
+            user.classList.add('visible')
         },
         switchTheme: function () {
             const lightButton = document.getElementById('themeLight')

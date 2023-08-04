@@ -30,21 +30,22 @@
         <main>
             <form @submit.prevent="searchUser">
                 <img src="./assets/icon-search.svg" alt="">
-                <input type="text" name="search" id="search" placeholder="Search GitHub username..."
+                <input required type="text" name="search" id="search" placeholder="Search GitHub username..."
                     aria-label="Search GitHub username...">
                 <button>Search</button>
             </form>
             <div id="user" class="user">
                 <header>
                     <picture class="user__avatar">
-                        <img class="user__avatar-img" src="{{ userAvatarImg }}" alt="" aria-hidden="true">
+                        <img class="user__avatar-img" :src="userAvatarImg" alt="" aria-hidden=" true">
                     </picture>
                     <div class="user__data">
-                        <div class="user__data-name"></div>
-                        <div class="user__data-at"></div>
-                        <div class="user__data-joined"></div>
+                        <div class="user__data-name">{{ userName }}</div>
+                        <div class="user__data-at">{{ userAt }}</div>
+                        <div class="user__data-joined">{{ userJoined }}</div>
                     </div>
                 </header>
+                <!-- TODO: Read from VUE user description, repos, followers, following, location, website, twitter account and company-->
                 <div>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, dolores!

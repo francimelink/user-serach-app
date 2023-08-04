@@ -59,7 +59,7 @@ body {
                 margin-top: 1rem;
                 padding: 2rem 1.5rem;
                 border-radius: 15px;
-                // visibility: hidden;
+                visibility: hidden;
 
                 >header {
                     display: flex;
@@ -75,6 +75,7 @@ body {
                 }
 
             }
+
         }
     }
 
@@ -83,6 +84,6 @@ body {
     }
 
     .visible {
-        visibility: hidden;
+        visibility: visible !important;
     }
 }

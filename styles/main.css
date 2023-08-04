@@ -164,7 +164,8 @@ body {
   body .wrapper main .user {
     margin-top: 1rem;
     padding: 2rem 1.5rem;
-    border-radius: 15px; }
+    border-radius: 15px;
+    visibility: hidden; }
     body .wrapper main .user > header {
       display: flex;
       flex-flow: row nowrap;
@@ -177,7 +178,7 @@ body {
   body .hide {
     display: none; }
   body .visible {
-    visibility: hidden; }
+    visibility: visible !important; }
 
 body.dark {
   background-color: #141D2F; }
