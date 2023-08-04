@@ -1,17 +1,33 @@
 body.dark {
-    background-color: #141D2F;
+    $primaryFontColor: #FFF;
+    $bgColor: #141D2F;
+    $contentBgColor: #1E2A47;
+
+    background-color: $bgColor;
 
     header {
-        color: white;
+        color: $primaryFontColor;
 
         button {
-            color: white;
+            color: $primaryFontColor;
         }
     }
 
     main {
+        form {
+            background-color: $contentBgColor;
+
+            input {
+                color: $primaryFontColor;
+
+                &::placeholder {
+                    color: $primaryFontColor;
+                }
+            }
+        }
+
         .user {
-            background-color: #1E2A47;
+            background-color: $contentBgColor;
         }
     }
 

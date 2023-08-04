@@ -34,13 +34,13 @@
                     aria-label="Search GitHub username...">
                 <button>Search</button>
             </form>
-            <div id="user" class="user">
+            <section id="user" class="user">
                 <header>
                     <picture class="user__avatar">
                         <img class="user__avatar-img" :src="userAvatarImg" alt="" aria-hidden=" true">
                     </picture>
                     <div class="user__data">
-                        <div class="user__data-name">{{ userName }}</div>
+                        <h1 class="user__data-name">{{ userName }}</h1>
                         <div class="user__data-at">{{ userAt }}</div>
                         <div class="user__data-joined">{{ userJoined }}</div>
                     </div>
@@ -70,8 +70,8 @@
                     </div>
                     <div><img src="./assets/icon-company.svg" alt="">@github</div>
                 </footer>
-            </div>
-        </main>
+    </div>
+    </main>
     </div>
     <script src="./script/main.js"></script>
 

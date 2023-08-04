@@ -1,5 +1,6 @@
-$primaryLightColor: #fefefe;
+$formColor: #0079FF;
 $fontFamily: 'Space Mono', sans-serif;
+$borderRadius: .95rem;
 
 * {
     box-sizing: border-box;
@@ -55,6 +56,34 @@ body {
         }
 
         main {
+            form {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: .5rem 0;
+                gap: .5rem;
+                border-radius: $borderRadius;
+
+                button {
+                    border: none;
+                    color: white;
+                    background-color: $formColor;
+                    font-size: .875rem;
+                    padding: .75rem 1.125rem;
+                    border-radius: .625rem;
+                }
+
+                input {
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    font-size: .8rem;
+                    line-height: 1.5rem;
+
+
+                }
+            }
+
             .user {
                 margin-top: 1rem;
                 padding: 2rem 1.5rem;
@@ -85,5 +114,10 @@ body {
 
     .visible {
         visibility: visible !important;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:focus {
+        transition: background-color 0s 600000s, color 0s 600000s;
     }
 }

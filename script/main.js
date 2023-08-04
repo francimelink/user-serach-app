@@ -25,7 +25,7 @@ const app = Vue.createApp({
             this.userAt = `@${userData.login}`;
             this.userJoined = `Joined ${userData.created_at}`
 
-            // TODO: fullfill all other data. 
+            // TODO: fullfill all other data.
 
 
             user.classList.add('visible')
@@ -42,6 +42,7 @@ const app = Vue.createApp({
 
         searchUser: function () {
             let gitUsername = document.getElementById('search')
+            let errMsg = 'No results'
             gitUsername = gitUsername.value
 
             let url = `https://api.github.com/users/${gitUsername}`
@@ -54,7 +55,8 @@ const app = Vue.createApp({
                     this.updateUser(data)
                 })
                 .catch(error => {
-                    console.error(error)
+                    // TODO: error hadeling. Show msg
+                    console.log(error);
                 })
         }
 

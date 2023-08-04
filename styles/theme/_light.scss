@@ -1,1 +1,41 @@
-body.light {}
+body.light {
+    $primaryFontColor: #697C9A;
+    $contentColor: #4B6a9B;
+    $secFontColor: #2B3442;
+    $bgColor: #F6F8FF;
+    $contentBgColor: #FEFEFE;
+
+
+    background-color: $bgColor;
+
+    header {
+        color: $primaryFontColor;
+        background-color: transparent;
+
+        .brand {
+            color: #222731;
+        }
+
+        button {
+            color: $contentColor;
+        }
+    }
+
+    main {
+        form {
+            background-color: $contentBgColor;
+
+            input {
+                color: $primaryFontColor;
+
+                &::placeholder {
+                    color: $primaryFontColor;
+                }
+            }
+        }
+
+        .user {
+            background-color: $contentBgColor;
+        }
+    }
+}

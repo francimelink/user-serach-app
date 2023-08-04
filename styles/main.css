@@ -161,6 +161,26 @@ body {
         vertical-align: middle;
         width: 20px;
         height: 20px; }
+  body .wrapper main form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 0;
+    gap: .5rem;
+    border-radius: 0.95rem; }
+    body .wrapper main form button {
+      border: none;
+      color: white;
+      background-color: #0079FF;
+      font-size: .875rem;
+      padding: .75rem 1.125rem;
+      border-radius: .625rem; }
+    body .wrapper main form input {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      font-size: .8rem;
+      line-height: 1.5rem; }
   body .wrapper main .user {
     margin-top: 1rem;
     padding: 2rem 1.5rem;
@@ -179,13 +199,40 @@ body {
     display: none; }
   body .visible {
     visibility: visible !important; }
+  body input:-webkit-autofill,
+  body input:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s; }
+
+body.light {
+  background-color: #F6F8FF; }
+  body.light header {
+    color: #697C9A;
+    background-color: transparent; }
+    body.light header .brand {
+      color: #222731; }
+    body.light header button {
+      color: #4B6a9B; }
+  body.light main form {
+    background-color: #FEFEFE; }
+    body.light main form input {
+      color: #697C9A; }
+      body.light main form input::placeholder {
+        color: #697C9A; }
+  body.light main .user {
+    background-color: #FEFEFE; }
 
 body.dark {
   background-color: #141D2F; }
   body.dark header {
-    color: white; }
+    color: #FFF; }
     body.dark header button {
-      color: white; }
+      color: #FFF; }
+  body.dark main form {
+    background-color: #1E2A47; }
+    body.dark main form input {
+      color: #FFF; }
+      body.dark main form input::placeholder {
+        color: #FFF; }
   body.dark main .user {
     background-color: #1E2A47; }
 
