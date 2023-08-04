@@ -36,6 +36,19 @@ body.light {
 
         .user {
             background-color: $contentBgColor;
+            color: $contentColor;
+
+            .user__data {
+
+                .user__data-name {
+                    color: $secFontColor;
+                }
+
+                .user__data-joined {
+                    font-size: .8rem;
+                    color: $primaryFontColor;
+                }
+            }
         }
     }
 }

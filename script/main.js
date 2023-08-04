@@ -14,7 +14,8 @@ const app = Vue.createApp({
             userWebsite: '',
             userTwitter: '',
             userCompany: '',
-            isVisible: false
+            isVisible: false,
+            month: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Otc', 'Nov', 'Dec']
         }
     },
     methods: {
@@ -23,7 +24,11 @@ const app = Vue.createApp({
             this.userAvatarImg = userData.avatar_url
             this.userName = userData.name;
             this.userAt = `@${userData.login}`;
-            this.userJoined = `Joined ${userData.created_at}`
+
+
+            // format joined date to 25 Jan 2011
+            let joinedAt = new Date(userData.created_at);
+            this.userJoined = `Joined ${joinedAt.getDate()} ${this.month[joinedAt.getMonth()]} ${joinedAt.getFullYear()}`
 
             // TODO: fullfill all other data.
 

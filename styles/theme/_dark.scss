@@ -28,6 +28,18 @@ body.dark {
 
         .user {
             background-color: $contentBgColor;
+            color: $primaryFontColor;
+
+            .user__data {
+
+                .user__data-name {
+                    color: $primaryFontColor;
+                }
+
+                .user__data-joined {
+                    font-size: .8rem;
+                }
+            }
         }
     }
 

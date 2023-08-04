@@ -155,12 +155,12 @@ body {
         text-transform: uppercase;
         letter-spacing: 1.5px;
         font-weight: 800;
-        margin-right: 10px; }
+        margin-right: .625rem; }
       body .wrapper > header button .icon {
         display: inline-block;
         vertical-align: middle;
-        width: 20px;
-        height: 20px; }
+        width: 1.25rem;
+        height: 1.25rem; }
   body .wrapper main form {
     display: flex;
     justify-content: center;
@@ -184,17 +184,29 @@ body {
   body .wrapper main .user {
     margin-top: 1rem;
     padding: 2rem 1.5rem;
-    border-radius: 15px;
-    visibility: hidden; }
+    border-radius: 0.95rem;
+    visibility: visible; }
     body .wrapper main .user > header {
       display: flex;
       flex-flow: row nowrap;
+      align-items: center;
       gap: 1rem; }
       body .wrapper main .user > header .user__avatar,
       body .wrapper main .user > header .user__avatar-img {
         width: 70px;
         height: 70px;
         border-radius: 50%; }
+    body .wrapper main .user .user__data {
+      letter-spacing: 1px; }
+      body .wrapper main .user .user__data .user__data-name {
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1.5rem; }
+      body .wrapper main .user .user__data .user__data-at {
+        color: #0079FF;
+        margin-bottom: .375rem; }
+      body .wrapper main .user .user__data .user__data-joined {
+        font-size: .8rem; }
   body .hide {
     display: none; }
   body .visible {
@@ -219,7 +231,13 @@ body.light {
       body.light main form input::placeholder {
         color: #697C9A; }
   body.light main .user {
-    background-color: #FEFEFE; }
+    background-color: #FEFEFE;
+    color: #4B6a9B; }
+    body.light main .user .user__data .user__data-name {
+      color: #2B3442; }
+    body.light main .user .user__data .user__data-joined {
+      font-size: .8rem;
+      color: #697C9A; }
 
 body.dark {
   background-color: #141D2F; }
@@ -234,6 +252,11 @@ body.dark {
       body.dark main form input::placeholder {
         color: #FFF; }
   body.dark main .user {
-    background-color: #1E2A47; }
+    background-color: #1E2A47;
+    color: #FFF; }
+    body.dark main .user .user__data .user__data-name {
+      color: #FFF; }
+    body.dark main .user .user__data .user__data-joined {
+      font-size: .8rem; }
 
 /*# sourceMappingURL=main.css.map */
