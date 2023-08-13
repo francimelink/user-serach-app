@@ -32,6 +32,8 @@
                 <img src="./assets/icon-search.svg" alt="">
                 <input required type="text" name="search" id="search" placeholder="Search GitHub username..."
                     aria-label="Search GitHub username...">
+                <!-- TODO: edit showing and styling error msg -->
+                <!-- <span>No results</span> -->
                 <button>Search</button>
             </form>
             <section id="user" class="user">
@@ -45,33 +47,55 @@
                         <div class="user__data-joined">{{ userJoined }}</div>
                     </div>
                 </header>
-                <!-- TODO: Read from VUE user description, repos, followers, following, location, website, twitter account and company-->
                 <div>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, dolores!
+                    <p class="user_bio">
+                        {{ userBio }}
                     </p>
-                    <div>
-                        Repos 8
-                        Followers 3938
-                        Following 9
+                    <div class="user__pub-info">
+                        <div>
+                            <div class="user__prop">Repos</div>
+                            <div class="user__prop-cnt"> {{ userPubRepo }}</div>
+                        </div>
+                        <div>
+                            <div class="user__prop">Followers</div>
+                            <div class="user__prop-cnt"> {{ userFollowers }}</div>
+                        </div>
+                        <div>
+                            <div class="user__prop">Following</div>
+                            <div class="user__prop-cnt"> {{ userFollowing }}</div>
+                        </div>
                     </div>
                 </div>
                 <footer>
-                    <div>
-                        <img src="./assets/icon-location.svg" alt="">
-                        San Francisco
-                    </div>
-                    <div>
-                        <img src="./assets/icon-website.svg" alt="">
-                        https://github.blog
-                    </div>
-                    <div>
-                        <img src="./assets/icon-twitter.svg" alt="">Not Available
-                    </div>
-                    <div><img src="./assets/icon-company.svg" alt="">@github</div>
+                    <ul>
+                        <li>
+                            <picture>
+                                <img src="./assets/icon-location.svg" alt="" aria-hidden="true">
+                            </picture>
+                            <div>{{ userLocation }}</div>
+                        </li>
+                        <li>
+                            <picture>
+                                <img src="./assets/icon-website.svg" alt="" aria-hidden="true">
+                            </picture>
+                            <div>{{ userWebsite }}</div>
+                        </li>
+                        <li>
+                            <picture>
+                                <img src="./assets/icon-twitter.svg" alt="" aria-hidden="true">
+                            </picture>
+                            <div>{{ userTwitter }}</span>
+                        </li>
+                        <li>
+                            <picture>
+                                <img src="./assets/icon-company.svg" alt="" aria-hidden="true">
+                            </picture>
+                            <div>{{ userCompany }}</div>
+                        </li>
+                    </ul>
                 </footer>
-    </div>
-    </main>
+            </section>
+        </main>
     </div>
     <script src="./script/main.js"></script>
 

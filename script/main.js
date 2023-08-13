@@ -1,12 +1,13 @@
 
 const app = Vue.createApp({
     data() {
+
         return {
             userAvatarImg: '',
             userName: '',
             userAt: '',
             userJoined: '',
-            userDesc: '',
+            userBio: '',
             userPubRepo: 0,
             userFollowers: 0,
             userFollowing: 0,
@@ -15,23 +16,41 @@ const app = Vue.createApp({
             userTwitter: '',
             userCompany: '',
             isVisible: false,
-            month: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Otc', 'Nov', 'Dec']
+            month: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Otc', 'Nov', 'Dec'],
+            notAvailablePlaceholder: 'Not Available'
         }
     },
     methods: {
         updateUser: function (userData) {
+
             const user = document.getElementById('user')
             this.userAvatarImg = userData.avatar_url
+            this.userAt = `@${userData.login}`
+
+            this.userPubRepo = userData.public_repos
+            this.userFollowers = userData.followers
+            this.userFollowing = userData.following
+
             this.userName = userData.name;
-            this.userAt = `@${userData.login}`;
+            if (!userData.name) this.userName = this.notAvailablePlaceholder
 
+            this.userBio = userData.bio
+            if (!userData.bio) this.userBio = this.notAvailablePlaceholder
 
-            // format joined date to 25 Jan 2011
+            this.userLocation = userData.location
+            if (!userData.location) this.userLocation = this.notAvailablePlaceholder
+
+            this.userWebsite = userData.html_url
+            if (!userData.html_url) this.userWebsite = this.notAvailablePlaceholder
+
+            this.userTwitter = userData.twitter_username
+            if (!userData.twitter_username) this.userTwitter = this.notAvailablePlaceholder
+
+            this.userCompany = userData.company
+            if (!userData.company) this.userCompany = this.notAvailablePlaceholder
+
             let joinedAt = new Date(userData.created_at);
             this.userJoined = `Joined ${joinedAt.getDate()} ${this.month[joinedAt.getMonth()]} ${joinedAt.getFullYear()}`
-
-            // TODO: fullfill all other data.
-
 
             user.classList.add('visible')
         },
@@ -47,7 +66,6 @@ const app = Vue.createApp({
 
         searchUser: function () {
             let gitUsername = document.getElementById('search')
-            let errMsg = 'No results'
             gitUsername = gitUsername.value
 
             let url = `https://api.github.com/users/${gitUsername}`
@@ -60,7 +78,7 @@ const app = Vue.createApp({
                     this.updateUser(data)
                 })
                 .catch(error => {
-                    // TODO: error hadeling. Show msg
+                    // TODO: error msg
                     console.log(error);
                 })
         }

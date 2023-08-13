@@ -50,5 +50,18 @@ body.light {
                 }
             }
         }
+
+        .user__pub-info {
+            background-color: $bgColor;
+
+            .user__prop {
+                color: $contentColor;
+            }
+
+
+            .user__prop-cnt {
+                color: $secFontColor
+            }
+        }
     }
 }

@@ -7,6 +7,7 @@ $borderRadius: .95rem;
 }
 
 body {
+    font-family: $fontFamily;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,6 +17,9 @@ body {
     padding: 0 1.5rem;
 
     .wrapper {
+        width: 100%;
+        max-width: 730px;
+
         >header {
             display: flex;
             flex-direction: row;
@@ -58,13 +62,15 @@ body {
         main {
             form {
                 display: flex;
-                justify-content: center;
+                width: 100%;
+                justify-content: space-between;
                 align-items: center;
-                padding: .5rem 0;
+                padding: .5rem .5rem .5rem 1rem;
                 gap: .5rem;
                 border-radius: $borderRadius;
 
                 button {
+                    flex: 1;
                     border: none;
                     color: white;
                     background-color: $formColor;
@@ -79,16 +85,23 @@ body {
                     outline: none;
                     font-size: .8rem;
                     line-height: 1.5rem;
-
-
+                    flex-shrink: 1;
+                    flex-grow: 1;
                 }
+
+                span {
+                    color: red;
+                    flex: 1;
+                    display: block;
+                }
+
             }
 
             .user {
                 margin-top: 1rem;
                 padding: 2rem 1.5rem;
                 border-radius: $borderRadius;
-                visibility: visible;
+                visibility: hidden;
 
                 >header {
                     display: flex;
@@ -123,8 +136,70 @@ body {
                     }
                 }
 
+                >div {
+                    p {
+                        width: 100%;
+                        font-size: .8rem;
+                        line-height: 1.5rem;
+                        margin: 1.5rem 0;
+                    }
+
+                    .user__pub-info {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        width: 100%;
+                        border-radius: $borderRadius;
+                        justify-content: space-around;
+                        text-align: center;
+                        padding: 1.125rem .875rem;
+                        margin: 1.5rem 0;
+
+                        .user__prop {
+                            font-size: .7rem;
+                            margin-bottom: .5rem;
+                        }
+
+                        .user__prop-cnt {
+                            font-size: 1rem;
+                            font-weight: bold;
+                        }
+                    }
+
+                }
+
             }
 
+        }
+
+        footer {
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+
+                li {
+                    height: 1.25rem;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 1rem;
+
+                    picture {
+                        flex-basis: 1.25rem;
+                        align-self: center;
+                    }
+                }
+
+                @media only screen and (min-width: 768px) {
+                    flex-flow: row wrap;
+
+                    li {
+                        width: 45%;
+                    }
+
+                }
+            }
         }
     }
 

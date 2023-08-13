@@ -40,6 +40,15 @@ body.dark {
                     font-size: .8rem;
                 }
             }
+
+            .user__pub-info {
+                background-color: $bgColor;
+
+                .user__prop,
+                .user__prop-cnt {
+                    color: $primaryFontColor;
+                }
+            }
         }
     }
 
