@@ -69,18 +69,24 @@ const app = Vue.createApp({
             gitUsername = gitUsername.value
 
             let url = `https://api.github.com/users/${gitUsername}`
+            try {
+                fetch(url)
+                    .then(response => {
+                        if (response.status === 200) {
+                            return response.json()
+                        }
+                    })
+                    .then(data => {
+                        this.updateUser(data)
+                    })
+                    .catch(error => {
+                        // TODO: error msg
+                        console.log(error);
+                    })
 
-            fetch(url)
-                .then(response => {
-                    return response.json()
-                })
-                .then(data => {
-                    this.updateUser(data)
-                })
-                .catch(error => {
-                    // TODO: error msg
-                    console.log(error);
-                })
+            } catch (error) {
+                console.log(error);
+            }
         }
 
     }

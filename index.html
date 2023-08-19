@@ -28,14 +28,18 @@
             </div>
         </header>
         <main>
-            <form @submit.prevent="searchUser">
-                <img src="./assets/icon-search.svg" alt="">
-                <input required type="text" name="search" id="search" placeholder="Search GitHub username..."
-                    aria-label="Search GitHub username...">
-                <!-- TODO: edit showing and styling error msg -->
-                <!-- <span>No results</span> -->
-                <button>Search</button>
-            </form>
+            <div id="userserach">
+                <picture>
+                    <img src="./assets/icon-search.svg" alt="">
+                </picture>
+                <form @submit.prevent="searchUser">
+                    <input required type="text" name="search" id="search" placeholder="Search GitHub username..."
+                        aria-label="Search GitHub username...">
+                    <!-- TODO: edit showing and styling error msg -->
+                    <!-- <span>No results</span> -->
+                    <button>Search</button>
+                </form>
+            </div>
             <section id="user" class="user">
                 <header>
                     <picture class="user__avatar">

@@ -14,7 +14,7 @@ body.dark {
     }
 
     main {
-        form {
+        #userserach {
             background-color: $contentBgColor;
 
             input {
@@ -34,10 +34,6 @@ body.dark {
 
                 .user__data-name {
                     color: $primaryFontColor;
-                }
-
-                .user__data-joined {
-                    font-size: .8rem;
                 }
             }
 

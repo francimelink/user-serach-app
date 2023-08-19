@@ -22,7 +22,7 @@ body.light {
     }
 
     main {
-        form {
+        #userserach {
             background-color: $contentBgColor;
 
             input {
@@ -45,7 +45,6 @@ body.light {
                 }
 
                 .user__data-joined {
-                    font-size: .8rem;
                     color: $primaryFontColor;
                 }
             }

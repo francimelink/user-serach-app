@@ -135,8 +135,13 @@ body {
   height: 100vh;
   padding: 0 1.5rem; }
   body .wrapper {
-    width: 100%;
-    max-width: 730px; }
+    width: 100%; }
+    @media (min-width: 600px) {
+      body .wrapper {
+        max-width: 573px; } }
+    @media (min-width: 992px) {
+      body .wrapper {
+        max-width: 730px; } }
     body .wrapper > header {
       display: flex;
       flex-direction: row;
@@ -165,91 +170,128 @@ body {
           vertical-align: middle;
           width: 1.25rem;
           height: 1.25rem; }
-    body .wrapper main form {
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      align-items: center;
-      padding: .5rem .5rem .5rem 1rem;
-      gap: .5rem;
-      border-radius: 0.95rem; }
-      body .wrapper main form button {
-        flex: 1;
-        border: none;
-        color: white;
-        background-color: #0079FF;
-        font-size: .875rem;
-        padding: .75rem 1.125rem;
-        border-radius: .625rem; }
-      body .wrapper main form input {
-        background-color: transparent;
-        border: none;
-        outline: none;
-        font-size: .8rem;
-        line-height: 1.5rem;
-        flex-shrink: 1;
-        flex-grow: 1; }
-      body .wrapper main form span {
-        color: red;
-        flex: 1;
-        display: block; }
-    body .wrapper main .user {
-      margin-top: 1rem;
-      padding: 2rem 1.5rem;
-      border-radius: 0.95rem;
-      visibility: hidden; }
-      body .wrapper main .user > header {
+    body .wrapper main {
+      font-size: 13px; }
+      @media (min-width: 768px) {
+        body .wrapper main {
+          font-size: 18px; } }
+      body .wrapper main #userserach {
         display: flex;
-        flex-flow: row nowrap;
+        width: 100%;
         align-items: center;
-        gap: 1rem; }
-        body .wrapper main .user > header .user__avatar,
-        body .wrapper main .user > header .user__avatar-img {
-          width: 70px;
-          height: 70px;
-          border-radius: 50%; }
-      body .wrapper main .user .user__data {
-        letter-spacing: 1px; }
-        body .wrapper main .user .user__data .user__data-name {
-          font-size: 1rem;
-          font-weight: bold;
-          line-height: 1.5rem; }
-        body .wrapper main .user .user__data .user__data-at {
-          color: #0079FF;
-          margin-bottom: .375rem; }
-        body .wrapper main .user .user__data .user__data-joined {
-          font-size: .8rem; }
-      body .wrapper main .user > div p {
-        width: 100%;
-        font-size: .8rem;
-        line-height: 1.5rem;
-        margin: 1.5rem 0; }
-      body .wrapper main .user > div .user__pub-info {
-        display: flex;
-        flex-flow: row nowrap;
-        width: 100%;
+        padding: .5rem .5rem .5rem 1rem;
+        gap: .5rem;
+        border-radius: 0.95rem; }
+        body .wrapper main #userserach picture,
+        body .wrapper main #userserach img {
+          width: 1.5em; }
+        body .wrapper main #userserach form {
+          width: 100%;
+          display: flex;
+          justify-content: space-between; }
+          body .wrapper main #userserach form button {
+            border: none;
+            color: white;
+            background-color: #0079FF;
+            font-size: 1em;
+            padding: .85em 1.3em;
+            border-radius: .625rem; }
+          body .wrapper main #userserach form input {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            line-height: 1.5rem;
+            flex-shrink: 1;
+            flex-grow: 1; }
+          body .wrapper main #userserach form span {
+            color: red;
+            flex: 1;
+            display: block; }
+      body .wrapper main .user {
+        margin-top: 1rem;
+        padding: 2rem 1.5rem;
         border-radius: 0.95rem;
-        justify-content: space-around;
-        text-align: center;
-        padding: 1.125rem .875rem;
-        margin: 1.5rem 0; }
-        body .wrapper main .user > div .user__pub-info .user__prop {
-          font-size: .7rem;
-          margin-bottom: .5rem; }
-        body .wrapper main .user > div .user__pub-info .user__prop-cnt {
-          font-size: 1rem;
-          font-weight: bold; }
+        visibility: hidden; }
+        @media (min-width: 600px) {
+          body .wrapper main .user {
+            margin-top: 1.625rem;
+            padding: 2rem 2.5rem; } }
+        body .wrapper main .user > header {
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+          gap: 1.5em; }
+          body .wrapper main .user > header .user__avatar,
+          body .wrapper main .user > header .user__avatar-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%; }
+            @media (min-width: 600px) {
+              body .wrapper main .user > header .user__avatar,
+              body .wrapper main .user > header .user__avatar-img {
+                width: 120px;
+                height: 120px; } }
+        body .wrapper main .user .user__data {
+          letter-spacing: 1px; }
+          body .wrapper main .user .user__data .user__data-name {
+            font-size: 1.4em;
+            font-weight: bold;
+            line-height: 1.5em; }
+          body .wrapper main .user .user__data .user__data-at {
+            font-size: 1em;
+            color: #0079FF;
+            margin-bottom: .5em; }
+            @media (min-width: 600px) {
+              body .wrapper main .user .user__data .user__data-at {
+                margin: .25em 0 .8em 0; } }
+          body .wrapper main .user .user__data .user__data-joined {
+            font-size: .9em; }
+        body .wrapper main .user > div p {
+          width: 100%;
+          font-size: .8em;
+          line-height: 1.5em;
+          margin: 1.5rem 0; }
+        body .wrapper main .user > div .user__pub-info {
+          display: flex;
+          flex-flow: row nowrap;
+          width: 100%;
+          border-radius: 0.95rem;
+          justify-content: space-around;
+          text-align: center;
+          padding: 1.125rem .875rem;
+          margin: 1.5rem 0; }
+          @media (min-width: 600px) {
+            body .wrapper main .user > div .user__pub-info {
+              justify-content: flex-start;
+              text-align: left;
+              padding-left: 2em; }
+              body .wrapper main .user > div .user__pub-info > div {
+                flex: 1; } }
+          body .wrapper main .user > div .user__pub-info .user__prop {
+            font-size: .7em;
+            margin-bottom: .5rem; }
+          body .wrapper main .user > div .user__pub-info .user__prop-cnt {
+            font-size: 1.25em;
+            font-weight: bold; }
     body .wrapper footer ul {
       display: flex;
       flex-direction: column;
       gap: 1rem;
       width: 100%; }
+      @media (min-width: 600px) {
+        body .wrapper footer ul {
+          height: 4rem;
+          flex-flow: column wrap; } }
       body .wrapper footer ul li {
         height: 1.25rem;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: 1rem; }
+        @media (min-width: 600px) {
+          body .wrapper footer ul li {
+            flex-flow: row wrap; } }
         body .wrapper footer ul li picture {
           flex-basis: 1.25rem;
           align-self: center; }
@@ -265,6 +307,10 @@ body {
   body input:-webkit-autofill,
   body input:-webkit-autofill:focus {
     transition: background-color 0s 600000s, color 0s 600000s; }
+    @media (min-width: 600px) {
+      body input:-webkit-autofill,
+      body input:-webkit-autofill:focus {
+        font-size: 1em; } }
 
 body.light {
   background-color: #F6F8FF; }
@@ -275,11 +321,11 @@ body.light {
       color: #222731; }
     body.light header button {
       color: #4B6a9B; }
-  body.light main form {
+  body.light main #userserach {
     background-color: #FEFEFE; }
-    body.light main form input {
+    body.light main #userserach input {
       color: #697C9A; }
-      body.light main form input::placeholder {
+      body.light main #userserach input::placeholder {
         color: #697C9A; }
   body.light main .user {
     background-color: #FEFEFE;
@@ -287,7 +333,6 @@ body.light {
     body.light main .user .user__data .user__data-name {
       color: #2B3442; }
     body.light main .user .user__data .user__data-joined {
-      font-size: .8rem;
       color: #697C9A; }
   body.light main .user__pub-info {
     background-color: #F6F8FF; }
@@ -302,19 +347,17 @@ body.dark {
     color: #FFF; }
     body.dark header button {
       color: #FFF; }
-  body.dark main form {
+  body.dark main #userserach {
     background-color: #1E2A47; }
-    body.dark main form input {
+    body.dark main #userserach input {
       color: #FFF; }
-      body.dark main form input::placeholder {
+      body.dark main #userserach input::placeholder {
         color: #FFF; }
   body.dark main .user {
     background-color: #1E2A47;
     color: #FFF; }
     body.dark main .user .user__data .user__data-name {
       color: #FFF; }
-    body.dark main .user .user__data .user__data-joined {
-      font-size: .8rem; }
     body.dark main .user .user__pub-info {
       background-color: #141D2F; }
       body.dark main .user .user__pub-info .user__prop,
